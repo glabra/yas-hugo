@@ -74,6 +74,11 @@ nav#sitemenu ul {
 
 nav#sitemenu ul li {
         display: inline;
+        margin-left: 1ex;
+}
+
+nav#sitemenu ul li:first-child{
+        margin-left: 0;
 }
 
 aside#pageinfo p.datetime {
