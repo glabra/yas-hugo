@@ -1,0 +1,12 @@
+name = "yas-hugo"
+license = "MIT"
+licenselink = "https://github.com/glabra/yas-hugo/blob/master/LICENSE"
+description = "Comfortable and simple hugo theme"
+homepage = "https://github.com/glabra/yas-hugo"
+tags = []
+features = []
+min_version = "0.27.1"
+
+[author]
+  name = "INOUE Yosuke"
+  homepage = "https://www.kamikakushi.net"

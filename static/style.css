@@ -1,0 +1,97 @@
+footer p {
+        margin: 0;
+}
+
+h2, h3 {
+         border: 1px solid;
+         padding: 5px 3px 3px 0.5em;
+}
+
+h2 {
+         background-color: #BBBBEE;
+         border-top-color: #ccccff;
+         border-left-color: #ccccff;
+         border-right-color: #666699;
+         border-bottom-color: #666699;
+}
+
+h2:before {
+        content: "■";
+}
+
+h3 {
+         background-color: #DDBBBB;
+         border-top-color: #ffcccc;
+         border-left-color: #ffcccc;
+         border-right-color: #996666;
+         border-bottom-color: #996666;
+}
+
+h3:before {
+        content: "◆";
+}
+
+h4 {
+        background-color: #ffffff;
+        border-top-color: #ffffff;
+        border-left-color: #996666;
+        border-right-color: #ffffff;
+        border-bottom-color: #996666;
+}
+
+pre {
+        margin-left: 40px;
+        background-color:#F0F8FF;
+        border: 1px solid gray;
+        overflow: scroll;
+}
+
+table {
+        border: 1px solid gray;
+        background-color: #ffffcc;
+}
+
+table th, table td {
+        border: 1px solid;
+        border-top-color: black;
+        border-left-color: black;
+        border-right-color: lightgray;
+        border-bottom-color: lightgray;
+}
+
+dl dt {
+        font-weight: bold;
+}
+
+nav#sitemenu ul {
+        list-style: none;
+        padding: 0;
+}
+
+nav#sitemenu ul li {
+        display: inline;
+}
+
+aside#pageinfo p.datetime {
+        margin-left: 46ex;
+}
+
+aside#pageinfo p.author {
+        margin-left: 44ex;
+}
+
+nav#pager ul {
+        list-style: none;
+}
+
+nav#pager ul li {
+        display: inline;
+}
+
+nav#pager ul li:before {
+        content: "/";
+}
+
+nav#pager ul li:first-child:before {
+        content: "";
+}
