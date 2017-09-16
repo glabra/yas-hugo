@@ -5,7 +5,7 @@ description = "Comfortable and simple hugo theme"
 homepage = "https://github.com/glabra/yas-hugo"
 tags = []
 features = []
-min_version = "0.27.1"
+min_version = "0.25"
 
 [author]
   name = "INOUE Yosuke"
