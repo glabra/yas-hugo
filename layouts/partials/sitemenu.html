@@ -1,6 +1,6 @@
 <nav id="sitemenu"><ul>
 <li><a href="/">[Home]</a></li>
-{{ range .Site.Menus.sitemenu }}
+{{- range .Site.Menus.sitemenu }}
 <li><a href="{{ .URL }}">[{{ .Name }}]</a></li>
-{{ end }}
+{{- end }}
 </ul></nav>

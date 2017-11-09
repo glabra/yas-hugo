@@ -3,26 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/style.css">
-{{ block "head-inject" . }}{{ end }}
+{{- block "head-inject" . }}{{ end }}
 <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
-{{ partial "ga" . }}
-</head>
+{{- template "_internal/google_analytics.html" . }}</head>
 <body>
 {{ partial "sitemenu.html" . }}
-{{ block "body" . }}
+{{- block "body" . }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-{{ end }}
-<footer>
+{{ end }}<footer>
 <hr>
-{{ if eq .Kind "section" }}
-{{ $p := .Site.GetPage "section" .Section }}
-{{ range first 1 $p.Pages.ByDate.Reverse }}
+{{- if eq .Kind "section" }}
+{{- $p := .Site.GetPage "section" .Section }}
+{{- range first 1 $p.Pages.ByDate.Reverse }}
 <p>Last updated: {{ .Date.Format "2006/01/02 03:04:05" }}</p>
-{{ end }}
-{{ else }}
+{{- end }}
+{{- else }}
 <p>Last updated: {{ .Lastmod.Format "2006/01/02 03:04:05" }}</p>
-{{ end }}
-<p>{{ .Site.Copyright | safeHTML }}</p>
+{{- end }}
+{{ .Site.Copyright | safeHTML }}
 </footer>
 </body>

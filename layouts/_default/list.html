@@ -1,27 +1,20 @@
 {{ define "head-inject" }}
-{{ if .Paginator.HasPrev }}
+{{- if .Paginator.HasPrev }}
 <link href="{{ .Paginator.Prev.URL }}" rel="prev" />
-{{ end }}
-{{ if .Paginator.HasNext }}
+{{- end }}
+{{- if .Paginator.HasNext }}
 <link href="{{ .Paginator.Next.URL }}" rel="next" />
-{{ end }}
-{{ if .RSSLink }}
+{{- end }}
+{{- if .RSSLink }}
 <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
-{{ end }}
+{{- end }}{{ end }}
 
 {{ define "body" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ $cur := add 1 (mul .Paginator.PageSize (sub .Paginator.PageNumber 1)) }}
+<h1>{{ .Title }}</h1>{{ .Content }}
+{{- $cur := add 1 (mul .Paginator.PageSize (sub .Paginator.PageNumber 1)) }}
 <ol start="{{ $cur }}">{{ range .Paginator.Pages }}
-<li><a href="{{ .RelPermalink }}">{{.Date.Format "2006年01月02日"}} {{ .Title }}</a></li>
-{{ end }}</ol>
-{{ if or .Paginator.HasPrev .Paginator.HasNext }}
-<nav id="pager"><ul>
-{{ if .Paginator.HasPrev }}<li><a href="{{ .Paginator.Prev.URL }}" rel="prev">Newer</a></li>{{ end }}
-{{ if .Paginator.HasNext }}<li><a href="{{ .Paginator.Next.URL }}" rel="next">Older</a></li>{{ end }}
-</ul></nav>
-{{ end }}
+<li><a href="{{ .RelPermalink }}">{{.Date.Format "2006年01月02日"}} {{ .Title }}</a></li>{{ end }}
+</ol>
+{{- partial "paginator.html" . }}
 {{ end }}
