@@ -1,13 +1,8 @@
 {{ define "head-inject" }}
-{{- if .Paginator.HasPrev }}
-<link href="{{ .Paginator.Prev.URL }}" rel="prev" />
-{{- end }}
-{{- if .Paginator.HasNext }}
-<link href="{{ .Paginator.Next.URL }}" rel="next" />
-{{- end }}
+{{- partial "paginator-meta.html" . }}
 {{- if .RSSLink }}
-<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
 {{- end }}{{ end }}
 
 {{ define "body" }}
