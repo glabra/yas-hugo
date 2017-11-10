@@ -2,7 +2,7 @@ article p {
   text-indent: 1em;
 }
 
-footer p {
+footer > p {
   margin: 0;
 }
 
@@ -55,7 +55,7 @@ table {
   background-color: #ffffcc;
 }
 
-table th, table td {
+th, td {
   border: 1px solid;
   border-top-color: black;
   border-left-color: black;
@@ -63,48 +63,47 @@ table th, table td {
   border-bottom-color: lightgray;
 }
 
-dl dt {
+dt {
   font-weight: bold;
 }
 
-nav#sitemenu ul {
+nav#sitemenu > ul {
   list-style: none;
   padding: 0;
 }
 
-nav#sitemenu ul li {
+nav#sitemenu > ul > li {
   display: inline;
   margin-left: 1ex;
 }
 
-nav#sitemenu ul li:first-child{
+nav#sitemenu > ul > li:first-child {
   margin-left: 0;
 }
 
-aside#pageinfo p.datetime:before {
-  content: "";
+aside#pageinfo > p.datetime:before {
+  /* 「2038年01月19日」の長さは大体9em */
   width: calc(100% - 9em);
+  content: "";
   max-width: 46ex;
   display: inline-block;
 }
 
-/* aside#pageinfo p.author {
-  margin-left: 44ex;
-} */
+/* Author's margin-left is 44ex */
 
-nav#pager ul {
+nav#pager > ul {
   list-style: none;
 }
 
-nav#pager ul li {
+nav#pager > ul > li {
   display: inline;
 }
 
-nav#pager ul li:before {
+nav#pager > ul > li:before {
   content: "/";
 }
 
-nav#pager ul li:first-child:before {
+nav#pager > ul > li:first-child:before {
   content: "";
 }
 

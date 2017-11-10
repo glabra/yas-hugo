@@ -2,14 +2,10 @@
 <h1>{{ .Title }}</h1>
 <aside id="pageinfo">
 <p class="datetime">{{ .Date.Format "2006年01月02日" }}</p>
-{{/*
-<p class="tag">tags</p>
-<p class="author">authors</p>
-*/}}<p>このページは、次のURLにあります。<br>
-<a href="{{ .Permalink }}">{{ .Permalink }}</a><br>
+<p>このページは、次のURLにあります。<br>
+<code><a href="{{ .Permalink }}">{{ .Permalink }}</a></code><br>
 あるいは、次のページから手繰っていくこともできます。<br>
-<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-</p>
+<code><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></code></p>
 </aside>
 <article>{{ .Content }}</article>
 {{ end }}

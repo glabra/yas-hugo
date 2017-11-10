@@ -11,8 +11,8 @@
 {{- block "body" . }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-{{ end }}<footer>
-<hr>
+{{ end }}<hr>
+<footer>
 {{- if eq .Kind "section" }}
 {{- $p := .Site.GetPage "section" .Section }}
 {{- range first 1 $p.Pages.ByDate.Reverse }}
